@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23605" systemVersion="24A335" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="PayslipEntity" representedClassName="PayslipEntity" syncable="YES" codeGenerationType="none">
+        <attribute name="amountPaid" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="attachmentFileName" optional="YES" attributeType="String"/>
+        <attribute name="hoursPaid" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="periodEnd" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="periodStart" attributeType="Date" usesScalarValueType="NO"/>
+        <relationship name="workplace" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkplaceEntity" inverseName="payslips" inverseEntity="WorkplaceEntity"/>
+    </entity>
+    <entity name="WorkplaceEntity" representedClassName="WorkplaceEntity" syncable="YES" codeGenerationType="none">
+        <attribute name="awardHourlyRate" attributeType="Decimal" defaultValueString="0.0"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" attributeType="String"/>
+        <relationship name="payslips" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="PayslipEntity" inverseName="workplace" inverseEntity="PayslipEntity"/>
+        <relationship name="shifts" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="WorkShiftEntity" inverseName="workplace" inverseEntity="WorkShiftEntity"/>
+    </entity>
+    <entity name="WorkShiftEntity" representedClassName="WorkShiftEntity" syncable="YES" codeGenerationType="none">
+        <attribute name="endsAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="startsAt" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="statusRaw" attributeType="String" defaultValueString="rostered"/>
+        <attribute name="unpaidBreakMinutes" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <relationship name="workplace" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WorkplaceEntity" inverseName="shifts" inverseEntity="WorkplaceEntity"/>
+    </entity>
+</model>
