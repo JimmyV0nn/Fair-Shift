@@ -1,0 +1,719 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		818B35EBD39702F6F4716453 /* FairShiftWidget.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 9E90A5F7C1897620E6BF2817 /* FairShiftWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		D125FF2C1151DC1F6E840610 /* FairShiftShare.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 29A93D74DBEAEFE29556CD70 /* FairShiftShare.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		414396380D85D65A19608201 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02C64B98B3C77DBFDB0E914E /* XCTest.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A48237CA9375CEB898D0782 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 690989DE5E4C51519C2A1F2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F11475ED2E6FCA403551F5E;
+			remoteInfo = FairShiftWidget;
+		};
+		2F62266951C669033083E032 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 690989DE5E4C51519C2A1F2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D4EC368D830506F9B46E948;
+			remoteInfo = FairShiftShare;
+		};
+		02F19A7A0B7890D7C8E6560D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 690989DE5E4C51519C2A1F2B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09239D25D5FF1BCEE051F03D;
+			remoteInfo = FairShift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D2264301EEE62A5746C9828C /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				818B35EBD39702F6F4716453 /* FairShiftWidget.appex in Embed Foundation Extensions */,
+				D125FF2C1151DC1F6E840610 /* FairShiftShare.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		74A62D4560DF4E7E161270DF /* FairShift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FairShift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E90A5F7C1897620E6BF2817 /* FairShiftWidget.appex */ = {isa = PBXFileReference; explicitFileType = wrapper.app-extension; includeInIndex = 0; path = FairShiftWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		29A93D74DBEAEFE29556CD70 /* FairShiftShare.appex */ = {isa = PBXFileReference; explicitFileType = wrapper.app-extension; includeInIndex = 0; path = FairShiftShare.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC32840685545E38470A58F1 /* FairShiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FairShiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C212335A6E72F8DDE0AC9D6F /* FairShift.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FairShift.entitlements; sourceTree = "<group>"; };
+		D4667B0D93A1C595401DB87E /* FairShiftWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FairShiftWidget.entitlements; sourceTree = "<group>"; };
+		651464ED5E1CE6B9EE25B268 /* FairShiftShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FairShiftShare.entitlements; sourceTree = "<group>"; };
+		FFEBD03AED27F03D405EEBCE /* Widget-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Widget-Info.plist; sourceTree = "<group>"; };
+		DA361314BB79E18F0310580B /* Share-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Share-Info.plist; sourceTree = "<group>"; };
+		02C64B98B3C77DBFDB0E914E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		A26F92B1658AE7B87C2DC4D0 /* FairShift */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FairShift;
+			sourceTree = "<group>";
+		};
+		C837EE288ED4DCF9EACED559 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		04BC7C49B3EB2C38803532C4 /* FairShiftWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FairShiftWidget;
+			sourceTree = "<group>";
+		};
+		A8AC92CF910E0F13FC584626 /* FairShiftShare */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FairShiftShare;
+			sourceTree = "<group>";
+		};
+		01831005A7569414FA221FA8 /* FairShiftTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FairShiftTests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3CCE6B4B26BB9A7E101C844E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6D69DE149916CFAB1C454AC6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6A0DCDEC303FE387AC39611F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9A2D1AEED89F0721360FD14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				414396380D85D65A19608201 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CDBA4794272088688AAF4D2D = {
+			isa = PBXGroup;
+			children = (
+				A26F92B1658AE7B87C2DC4D0 /* FairShift */,
+				C837EE288ED4DCF9EACED559 /* Shared */,
+				04BC7C49B3EB2C38803532C4 /* FairShiftWidget */,
+				A8AC92CF910E0F13FC584626 /* FairShiftShare */,
+				01831005A7569414FA221FA8 /* FairShiftTests */,
+				7F64FA80251C1A3C55AEA7C7 /* Config */,
+				71DFF1026AC69FFC3A8C8938 /* Frameworks */,
+				EBCED177BFF1708D25765CB1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7F64FA80251C1A3C55AEA7C7 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				C212335A6E72F8DDE0AC9D6F /* FairShift.entitlements */,
+				D4667B0D93A1C595401DB87E /* FairShiftWidget.entitlements */,
+				651464ED5E1CE6B9EE25B268 /* FairShiftShare.entitlements */,
+				FFEBD03AED27F03D405EEBCE /* Widget-Info.plist */,
+				DA361314BB79E18F0310580B /* Share-Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		71DFF1026AC69FFC3A8C8938 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02C64B98B3C77DBFDB0E914E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EBCED177BFF1708D25765CB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				74A62D4560DF4E7E161270DF /* FairShift.app */,
+				9E90A5F7C1897620E6BF2817 /* FairShiftWidget.appex */,
+				29A93D74DBEAEFE29556CD70 /* FairShiftShare.appex */,
+				BC32840685545E38470A58F1 /* FairShiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09239D25D5FF1BCEE051F03D /* FairShift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DD119143D5F60581FC6A8E30 /* Build configuration list for PBXNativeTarget "FairShift" */;
+			buildPhases = (
+				81B10DAC3DA0B7D69BACDABD /* Sources */,
+				3CCE6B4B26BB9A7E101C844E /* Frameworks */,
+				8084A315D7E23CF930664CB6 /* Resources */,
+				D2264301EEE62A5746C9828C /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7F8BE0B5F866CE89226FB241 /* PBXTargetDependency */,
+				4D32400AF41DA31BB68D3EBB /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				A26F92B1658AE7B87C2DC4D0 /* FairShift */,
+				C837EE288ED4DCF9EACED559 /* Shared */,
+			);
+			name = FairShift;
+			packageProductDependencies = (
+			);
+			productName = FairShift;
+			productReference = 74A62D4560DF4E7E161270DF /* FairShift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F11475ED2E6FCA403551F5E /* FairShiftWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 91C0E7A8ACC3CEFC575266D7 /* Build configuration list for PBXNativeTarget "FairShiftWidget" */;
+			buildPhases = (
+				537941336D7C7BDE0B50814B /* Sources */,
+				6D69DE149916CFAB1C454AC6 /* Frameworks */,
+				4D47EBCC7DAB57E5A3B5AF39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				04BC7C49B3EB2C38803532C4 /* FairShiftWidget */,
+				C837EE288ED4DCF9EACED559 /* Shared */,
+			);
+			name = FairShiftWidget;
+			packageProductDependencies = (
+			);
+			productName = FairShiftWidget;
+			productReference = 9E90A5F7C1897620E6BF2817 /* FairShiftWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		3D4EC368D830506F9B46E948 /* FairShiftShare */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19BF25DB73289F95916D8114 /* Build configuration list for PBXNativeTarget "FairShiftShare" */;
+			buildPhases = (
+				8A4BA685BBBEE52BAD474B6C /* Sources */,
+				6A0DCDEC303FE387AC39611F /* Frameworks */,
+				9B5F41C04A2F40597D4A256F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				A8AC92CF910E0F13FC584626 /* FairShiftShare */,
+				C837EE288ED4DCF9EACED559 /* Shared */,
+			);
+			name = FairShiftShare;
+			packageProductDependencies = (
+			);
+			productName = FairShiftShare;
+			productReference = 29A93D74DBEAEFE29556CD70 /* FairShiftShare.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		C407240CDF96CAFD4A03E69C /* FairShiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 407E72DD41C615C7DF798B9B /* Build configuration list for PBXNativeTarget "FairShiftTests" */;
+			buildPhases = (
+				A11039992EE5A61DD7CEB6A8 /* Sources */,
+				D9A2D1AEED89F0721360FD14 /* Frameworks */,
+				BEA61988464C7C486377BEF1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F880B0D8E6E92092C4353D5D /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				01831005A7569414FA221FA8 /* FairShiftTests */,
+			);
+			name = FairShiftTests;
+			packageProductDependencies = (
+			);
+			productName = FairShiftTests;
+			productReference = BC32840685545E38470A58F1 /* FairShiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		690989DE5E4C51519C2A1F2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2620;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					09239D25D5FF1BCEE051F03D = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					3F11475ED2E6FCA403551F5E = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					3D4EC368D830506F9B46E948 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					C407240CDF96CAFD4A03E69C = {
+						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 09239D25D5FF1BCEE051F03D;
+					};
+				};
+			};
+			buildConfigurationList = 6C0A058C7BAAC44EBB9F6070 /* Build configuration list for PBXProject "FairShift" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CDBA4794272088688AAF4D2D;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EBCED177BFF1708D25765CB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09239D25D5FF1BCEE051F03D /* FairShift */,
+				3F11475ED2E6FCA403551F5E /* FairShiftWidget */,
+				3D4EC368D830506F9B46E948 /* FairShiftShare */,
+				C407240CDF96CAFD4A03E69C /* FairShiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8084A315D7E23CF930664CB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D47EBCC7DAB57E5A3B5AF39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B5F41C04A2F40597D4A256F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BEA61988464C7C486377BEF1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		81B10DAC3DA0B7D69BACDABD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		537941336D7C7BDE0B50814B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A4BA685BBBEE52BAD474B6C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A11039992EE5A61DD7CEB6A8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7F8BE0B5F866CE89226FB241 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F11475ED2E6FCA403551F5E /* FairShiftWidget */;
+			targetProxy = 4A48237CA9375CEB898D0782 /* PBXContainerItemProxy */;
+		};
+		4D32400AF41DA31BB68D3EBB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D4EC368D830506F9B46E948 /* FairShiftShare */;
+			targetProxy = 2F62266951C669033083E032 /* PBXContainerItemProxy */;
+		};
+		F880B0D8E6E92092C4353D5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09239D25D5FF1BCEE051F03D /* FairShift */;
+			targetProxy = 02F19A7A0B7890D7C8E6560D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C7FC0B9A407A7B147E84A1D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9D6881729CC24DCF7079B808 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A819E54FB65263F5FD6E0015 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/FairShift.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A3DSF9HBR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FairShift;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.au.FairShift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		3EE0DCA0D8A9E20E5C9F84DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Config/FairShift.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A3DSF9HBR;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = FairShift;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.au.FairShift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		594924ADA14B9A83F80A30A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/FairShiftWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A3DSF9HBR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Config/Widget-Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FairShift;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.au.FairShift.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		49DCF3D79E08FFEB21AA3F5A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/FairShiftWidget.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A3DSF9HBR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Config/Widget-Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FairShift;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.au.FairShift.Widget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3FC57AE446E4B20F9CD10B13 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/FairShiftShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A3DSF9HBR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Config/Share-Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FairShift;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.au.FairShift.Share;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9239010EF24ACAF010D98B74 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_ENTITLEMENTS = Config/FairShiftShare.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A3DSF9HBR;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Config/Share-Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FairShift;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.au.FairShift.Share;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		3F5940B8114E447B9B003124 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A3DSF9HBR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.au.FairShiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FairShift.app/FairShift";
+			};
+			name = Debug;
+		};
+		356CD275D5B7F549E645332C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3A3DSF9HBR;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = au.edu.au.FairShiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FairShift.app/FairShift";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6C0A058C7BAAC44EBB9F6070 /* Build configuration list for PBXProject "FairShift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7FC0B9A407A7B147E84A1D3 /* Debug */,
+				9D6881729CC24DCF7079B808 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DD119143D5F60581FC6A8E30 /* Build configuration list for PBXNativeTarget "FairShift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A819E54FB65263F5FD6E0015 /* Debug */,
+				3EE0DCA0D8A9E20E5C9F84DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		91C0E7A8ACC3CEFC575266D7 /* Build configuration list for PBXNativeTarget "FairShiftWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				594924ADA14B9A83F80A30A1 /* Debug */,
+				49DCF3D79E08FFEB21AA3F5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19BF25DB73289F95916D8114 /* Build configuration list for PBXNativeTarget "FairShiftShare" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FC57AE446E4B20F9CD10B13 /* Debug */,
+				9239010EF24ACAF010D98B74 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		407E72DD41C615C7DF798B9B /* Build configuration list for PBXNativeTarget "FairShiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F5940B8114E447B9B003124 /* Debug */,
+				356CD275D5B7F549E645332C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 690989DE5E4C51519C2A1F2B /* Project object */;
+}
