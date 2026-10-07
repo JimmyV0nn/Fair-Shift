@@ -1,8 +1,8 @@
 import CoreData
 
-// Core Data implementations of the repository protocols. every fetch goes through
-// `fetch` / `fetchOne` so a failing store always surfaces as the same
-// RepositoryError instead of leaking Core Data errors upwards.
+// the Core Data versions of the repository protocols. every fetch / save goes through
+// fetchAll and commit, so any Core Data failure just comes out as one RepositoryError
+// instead of leaking Core Data errors up to the use cases.
 
 private extension NSManagedObjectContext {
     func fetchAll<T: NSManagedObject>(_ type: T.Type,
@@ -144,8 +144,8 @@ struct CoreDataPayslipRepository: PayslipRepository {
     }
 }
 
-// the visa limit is a single pair of values, not a table - it lives in the App Group
-// defaults so it's one tiny shared setting.
+// the visa limit is just two values, not worth a table - so it sits in the App Group
+// defaults.
 struct UserDefaultsWorkLimitSettingsRepository: WorkLimitSettingsRepository {
     var defaults: UserDefaults = AppGroup.userDefaults
     var calendar: Calendar = .current
@@ -158,7 +158,7 @@ struct UserDefaultsWorkLimitSettingsRepository: WorkLimitSettingsRepository {
         let anchor = defaults.object(forKey: anchorKey) as? Date
         return VisaWorkLimit(
             hoursPerFortnight: hours.map { Decimal($0) } ?? VisaWorkLimit.defaultHoursPerFortnight,
-            // until the student picks a date, fortnights start from the most recent Monday
+            // no date picked yet? just start counting from last Monday
             fortnightAnchor: anchor ?? Self.mostRecentMonday(calendar: calendar))
     }
 

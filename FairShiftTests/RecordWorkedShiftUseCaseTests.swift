@@ -2,7 +2,7 @@ import XCTest
 @testable import FairShift
 
 final class RecordWorkedShiftUseCaseTests: XCTestCase {
-    // the middle of the first fortnight - earlier shifts are over, later ones haven't happened
+    // middle of the first fortnight - earlier shifts are done, later ones haven't happened
     private let now = TestDates.at(day: 5, hour: 20)
 
     private func makeUseCase(shifts: [WorkShift] = [], limitHours: Decimal = 48)
@@ -19,7 +19,7 @@ final class RecordWorkedShiftUseCaseTests: XCTestCase {
         let rostered = Fixtures.rosteredShift(day: 3, from: 9, to: 15)
         let (useCase, repo) = makeUseCase(shifts: [rostered])
 
-        // the shift actually ran an hour late
+        // it ran an hour late
         let outcome = try useCase.execute(rosteredShiftID: rostered.id, workplaceID: Fixtures.cafe.id,
                                           startsAt: rostered.startsAt, endsAt: TestDates.at(day: 3, hour: 16),
                                           unpaidBreakMinutes: 0, now: now)
@@ -40,9 +40,9 @@ final class RecordWorkedShiftUseCaseTests: XCTestCase {
         XCTAssertEqual(repo.stored.count, 1)
     }
 
-    // the record has to be truthful even if it shows a breach
+    // the record has to be honest even if it shows I went over
     func test_recordsTheShiftEvenWhenItPutsTheStudentOverTheVisaLimit_andReportsIt() throws {
-        // 48h already worked, on every day except the one being recorded
+        // 48h already worked, every day except the one I'm recording
         let existing = [0, 1, 2, 3, 4, 6, 7, 8].map { Fixtures.workedShift(day: $0) }
         let (useCase, repo) = makeUseCase(shifts: existing)
 

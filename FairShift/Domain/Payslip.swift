@@ -1,7 +1,7 @@
 import Foundation
 
-// what the employer says they paid for one pay period. hoursPaid and amountPaid are
-// typed in from the payslip itself; attachmentFileName points at the saved copy.
+// what the employer says they paid for one pay period. hoursPaid / amountPaid get
+// typed in off the payslip, attachmentFileName is the saved copy of the file.
 struct Payslip: Identifiable, Hashable, Sendable {
     let id: UUID
     var workplaceID: UUID
@@ -28,7 +28,7 @@ struct Payslip: Identifiable, Hashable, Sendable {
     }
 }
 
-// the answer to "was I paid properly for this period?"
+// the answer to "did I get paid properly?"
 struct PayslipReview: Equatable, Sendable {
     enum Verdict: Equatable, Sendable {
         case paidCorrectly
@@ -41,6 +41,6 @@ struct PayslipReview: Equatable, Sendable {
     let expectedPay: Decimal        // hoursRecorded x the workplace's award rate
     let verdict: Verdict
 
-    // positive = the payslip counts fewer hours than I actually worked
+    // positive = payslip counted fewer hours than I worked
     var hoursGap: Decimal { hoursRecorded - payslip.hoursPaid }
 }

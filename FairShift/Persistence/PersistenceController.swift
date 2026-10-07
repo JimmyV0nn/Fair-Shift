@@ -1,7 +1,7 @@
 import CoreData
 
-// owns the Core Data stack. the store lives inside the App Group container, so it
-// is one shared location (and survives the app being updated).
+// sets up Core Data. the database file lives in the App Group container so it's
+// in one shared place.
 final class PersistenceController {
     let container: NSPersistentContainer
 

@@ -63,7 +63,7 @@ struct ShiftEditorView: View {
         }
         .onAppear { vm.load() }
         .onChange(of: vm.didSave) { _, saved in
-            // a warning stays on screen until the student taps Done
+            // if there's a warning, keep the sheet open until they tap Done
             if saved && vm.limitWarning == nil { dismiss() }
         }
     }

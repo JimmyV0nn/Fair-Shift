@@ -9,7 +9,7 @@ final class WorkplacesViewModel {
     var workplaces: [Workplace] = []
     var errorMessage: String?
 
-    // add-workplace form
+    // the add-workplace form fields
     var newName = ""
     var newRateText = ""
 
@@ -25,7 +25,7 @@ final class WorkplacesViewModel {
         }
     }
 
-    // returns true when the workplace was saved
+    // true if it saved, so the sheet knows when to close
     func addWorkplace() -> Bool {
         errorMessage = nil
         let name = newName.trimmingCharacters(in: .whitespaces)

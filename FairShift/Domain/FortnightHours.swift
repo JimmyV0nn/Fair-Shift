@@ -1,9 +1,8 @@
 import Foundation
 
-// the student-visa work limit is counted per fortnight, so everything here is
-// built around a 14-day window that repeats from a start date the student picks.
-// the 48-hour default is only a starting value - the student confirms the real
-// figure for their own visa in Settings.
+// the visa work limit is counted per fortnight, so it's all built around a 14-day
+// window that keeps repeating from a start date the student picks.
+// 48 hours is just the default - check your own visa and change it in Settings.
 struct VisaWorkLimit: Equatable, Sendable {
     static let defaultHoursPerFortnight: Decimal = 48
 
@@ -15,7 +14,7 @@ struct VisaWorkLimit: Equatable, Sendable {
         let day = calendar.startOfDay(for: date)
         let daysSinceAnchor = calendar.dateComponents([.day], from: anchorDay, to: day).day ?? 0
 
-        // floor division so dates before the anchor still land in a proper window
+        // round down so dates before the anchor still land in the right window
         let windowsSinceAnchor = Int((Double(daysSinceAnchor) / 14).rounded(.down))
         let start = calendar.date(byAdding: .day, value: windowsSinceAnchor * 14, to: anchorDay)!
         let end = calendar.date(byAdding: .day, value: 14, to: start)!
@@ -48,7 +47,7 @@ struct FortnightHoursStatus: Equatable, Sendable {
         return max(calendar.dateComponents([.day], from: today, to: window.end).day ?? 0, 0)
     }
 
-    // adds up the paid hours of every shift in the window
+    // adds up the paid hours of the shifts in the window
     static func make(window: FortnightWindow, limit: Decimal, shifts: [WorkShift]) -> FortnightHoursStatus {
         let inWindow = shifts.filter { window.contains($0.startsAt) }
         let worked = inWindow.filter { $0.status == .worked }.reduce(Decimal(0)) { $0 + $1.paidHours }

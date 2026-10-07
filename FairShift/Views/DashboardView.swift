@@ -51,7 +51,7 @@ struct DashboardView: View {
         let remaining = NSDecimalNumber(decimal: status.hoursRemaining).doubleValue
         let limit = NSDecimalNumber(decimal: status.limitHours).doubleValue
 
-        // the ring shows the hours still available, so it empties as the fortnight fills up
+        // ring shows the hours still available, so it empties as the fortnight fills up
         return VStack(spacing: 14) {
             Gauge(value: remaining, in: 0...max(limit, 1)) {
                 Text("left")

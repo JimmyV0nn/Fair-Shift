@@ -1,8 +1,8 @@
 import Foundation
 @testable import FairShift
 
-// mock repositories: plain dictionaries, no Core Data. the use cases can't tell
-// the difference because they only know the protocols.
+// mock repositories - just dictionaries, no Core Data. the use cases can't tell the
+// difference since they only know the protocols.
 
 final class InMemoryWorkplaceRepository: WorkplaceRepository {
     private(set) var stored: [UUID: Workplace] = [:]

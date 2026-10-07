@@ -6,7 +6,7 @@ struct FairShiftApp: App {
 
     init() {
         let environment = AppEnvironment.live()
-        // `-seedSampleData` fills an empty store with demo shifts, for demos and UI checks
+        // launch with -seedSampleData to fill an empty app with demo shifts
         if CommandLine.arguments.contains("-seedSampleData"),
            (try? environment.workplaces.allWorkplaces().isEmpty) == true {
             try? SampleData.load(into: environment)

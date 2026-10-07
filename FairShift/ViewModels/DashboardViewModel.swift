@@ -1,8 +1,8 @@
 import Foundation
 import Observation
 
-// drives "This Fortnight": hours used against the visa limit, the next shift, and
-// whether there are payslips waiting from the share sheet.
+// the "This Fortnight" screen: hours vs the visa limit, next shift, and whether any
+// shared payslips are waiting.
 @MainActor
 @Observable
 final class DashboardViewModel {

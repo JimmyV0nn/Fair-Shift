@@ -1,10 +1,10 @@
 import Foundation
 
-// records what actually happened. either turns a rostered shift into a worked one
-// (with the real finish time), or logs a shift that was never on the roster.
+// records what really happened: either turns a rostered shift into a worked one
+// (with the real finish time) or logs a shift that was never on the roster.
 // unlike rostering, going over the visa limit is NOT refused here - the hours are
-// already worked and the record has to be truthful. the outcome carries the
-// fortnight status so the screen can warn about it instead.
+// already worked, so the record has to be honest. it hands back the fortnight status
+// so the screen can warn about it instead.
 struct RecordWorkedShiftUseCase {
     let workplaces: WorkplaceRepository
     let shifts: ShiftRepository

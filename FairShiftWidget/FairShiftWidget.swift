@@ -1,8 +1,8 @@
 import WidgetKit
 import SwiftUI
 
-// the Home Screen / Lock Screen widget. it only reads the snapshot the app wrote
-// into the App Group - it never touches Core Data.
+// the Home Screen / Lock Screen widget. it just reads the snapshot the app wrote to
+// the App Group and never touches Core Data.
 
 struct FortnightEntry: TimelineEntry {
     let date: Date
@@ -24,8 +24,8 @@ struct FortnightProvider: TimelineProvider {
         let snapshot = WidgetSnapshotStore.load() ?? .notSetUp(now: now)
         let entry = FortnightEntry(date: now, snapshot: snapshot)
 
-        // the app reloads this whenever data changes; the refresh below only keeps
-        // "days left" and the next-shift countdown fresh if the app isn't opened
+        // the app reloads this whenever data changes - this refresh is just so "days left"
+        // and the next shift don't go stale if the app isn't opened
         let refresh = Calendar.current.date(byAdding: .minute, value: 30, to: now)!
         completion(Timeline(entries: [entry], policy: .after(refresh)))
     }

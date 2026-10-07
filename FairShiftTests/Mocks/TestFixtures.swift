@@ -1,7 +1,7 @@
 import Foundation
 @testable import FairShift
 
-// fixed dates so no test depends on the day it runs. the first fortnight is
+// fixed dates so tests don't depend on what day they run. the first fortnight is
 // Mon 6 Jan 2025 up to (not including) Mon 20 Jan 2025.
 enum TestDates {
     static let fortnightStart: Date = {
@@ -21,7 +21,7 @@ enum Fixtures {
     static let cafe = Workplace(name: "Campus Café", awardHourlyRate: 25)
     static let warehouse = Workplace(name: "Riverside Warehouse", awardHourlyRate: 30)
 
-    // a 6-hour worked shift (6h less the break), `breakMinutes` unpaid
+    // by default a 9-3 shift (6h), minus whatever unpaid break you pass in
     static func workedShift(at workplace: Workplace = cafe, day: Int, from: Int = 9, to: Int = 15,
                             breakMinutes: Int = 0) -> WorkShift {
         WorkShift(workplaceID: workplace.id, startsAt: TestDates.at(day: day, hour: from),

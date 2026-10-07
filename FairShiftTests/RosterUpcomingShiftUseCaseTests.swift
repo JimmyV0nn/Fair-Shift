@@ -2,7 +2,7 @@ import XCTest
 @testable import FairShift
 
 final class RosterUpcomingShiftUseCaseTests: XCTestCase {
-    // "now" is the evening before the fortnight starts, so every shift below is in the future
+    // "now" is the evening before the fortnight starts, so all the shifts below are in the future
     private let now = TestDates.at(day: -1, hour: 18)
 
     private func makeUseCase(shifts: [WorkShift] = [], limitHours: Decimal = 48)
@@ -31,7 +31,7 @@ final class RosterUpcomingShiftUseCaseTests: XCTestCase {
     // MARK: boundary
 
     func test_allowsAShiftThatBringsTheFortnightToExactlyTheVisaLimit() throws {
-        // 7 worked shifts x 6h = 42h, plus a 6h shift = exactly 48h
+        // 7 shifts x 6h = 42h, plus a 6h one = exactly 48h
         let existing = (0..<7).map { Fixtures.workedShift(day: $0) }
         let (useCase, _) = makeUseCase(shifts: existing)
 

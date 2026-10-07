@@ -1,8 +1,8 @@
 import Foundation
 
-// puts a future shift on the roster - but only if it's a shift the student can
-// actually legally work. the visa rule matters most: a shift that would push the
-// fortnight over the limit is refused instead of quietly added.
+// puts a future shift on the roster, but only if the student can legally work it.
+// the visa rule matters most: a shift that would push the fortnight over the limit
+// gets refused instead of quietly added.
 struct RosterUpcomingShiftUseCase {
     let workplaces: WorkplaceRepository
     let shifts: ShiftRepository

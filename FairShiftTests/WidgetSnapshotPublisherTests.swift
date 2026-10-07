@@ -1,8 +1,8 @@
 import XCTest
 @testable import FairShift
 
-// the widget only shows what the app publishes, so these check that every change
-// produces the right snapshot and asks WidgetKit to reload
+// the widget only shows what the app publishes, so check each change gives the right
+// snapshot and tells WidgetKit to reload
 final class WidgetSnapshotPublisherTests: XCTestCase {
     private let now = TestDates.at(day: 2, hour: 12)
 

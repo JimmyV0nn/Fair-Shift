@@ -1,8 +1,8 @@
 import Foundation
 
-// files a payslip against the pay period it covers. a workplace can only have one
-// payslip per period - filing a second one for overlapping dates would make the
-// pay check count the same hours twice.
+// files a payslip for the pay period it covers. only one payslip per workplace per
+// period - a second one with overlapping dates would make the pay check count the
+// same hours twice.
 struct RecordPayslipUseCase {
     let workplaces: WorkplaceRepository
     let payslips: PayslipRepository

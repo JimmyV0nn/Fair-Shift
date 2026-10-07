@@ -1,8 +1,8 @@
 import XCTest
 @testable import FairShift
 
-// the one test that touches the real App Group folder: it is the hand-off point
-// between the share extension and the app, so it has to work on the real filesystem
+// the only test that touches the real App Group folder - it's the hand-off between the
+// share extension and the app, so it needs to work on the real filesystem
 final class SharedPayslipInboxTests: XCTestCase {
     private let inbox = SharedPayslipInbox()
     private var tempFile: URL!

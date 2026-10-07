@@ -1,6 +1,6 @@
 import SwiftUI
 
-// the result of checking one payslip against the shifts the student logged
+// shows the result of checking one payslip against the shifts I logged
 struct PayslipReviewView: View {
     let environment: AppEnvironment
     let row: PayslipsViewModel.Row
