@@ -1,8 +1,8 @@
 import Foundation
 
-// everything the widget needs, flattened into plain values. the app writes this
-// after every change to shifts/workplaces, the widget only ever reads it - so the
-// widget never has to open Core Data.
+// everything the widget needs, as plain values. the app writes it after every change
+// to shifts/workplaces and the widget only reads it, so the widget never has to
+// open Core Data.
 struct WidgetSnapshot: Codable, Equatable {
     struct NextShift: Codable, Equatable {
         var workplaceName: String
@@ -28,7 +28,7 @@ struct WidgetSnapshot: Codable, Equatable {
                        windowStart: now, windowEnd: now, nextShift: nil, generatedAt: now)
     }
 
-    // placeholder content for the widget gallery
+    // fake content for the widget gallery
     static let preview = WidgetSnapshot(
         isSetUp: true, hoursWorked: 22.5, hoursRostered: 12, limitHours: 48,
         windowStart: Date(), windowEnd: Date().addingTimeInterval(7 * 86_400),

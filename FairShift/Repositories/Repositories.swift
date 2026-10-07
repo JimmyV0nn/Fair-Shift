@@ -1,7 +1,7 @@
 import Foundation
 
-// use cases and view models only ever see these protocols - nothing outside
-// Repositories/CoreData knows Core Data exists. tests plug in in-memory versions.
+// use cases and view models only know these protocols - nothing outside
+// Repositories/CoreData has any idea Core Data exists. tests swap in in-memory ones.
 
 enum RepositoryError: LocalizedError {
     case storeUnavailable
@@ -22,13 +22,13 @@ protocol ShiftRepository {
     func save(_ shift: WorkShift) throws
     func delete(id: UUID) throws
 
-    // every shift (any workplace) that starts in [start, end)
+    // all shifts (any workplace) that start between start and end
     func shifts(startingFrom start: Date, before end: Date) throws -> [WorkShift]
 
-    // only shifts that really happened at one workplace, for checking a payslip
+    // only shifts I really worked at one workplace - used for the pay check
     func workedShifts(atWorkplace workplaceID: UUID, startingFrom start: Date, before end: Date) throws -> [WorkShift]
 
-    // the soonest rostered shift that hasn't started yet
+    // next rostered shift that hasn't started yet
     func nextRosteredShift(after date: Date) throws -> WorkShift?
 }
 

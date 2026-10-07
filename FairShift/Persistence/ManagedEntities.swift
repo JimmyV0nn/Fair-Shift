@@ -1,8 +1,8 @@
 import CoreData
 
-// the Core Data classes. they stay inside the persistence layer - the rest of the
-// app works with the plain Workplace / WorkShift / Payslip structs and these
-// extensions do the translating in both directions.
+// the Core Data classes. they never leave the persistence layer - everything else
+// uses the plain Workplace / WorkShift / Payslip structs, and the `domain` / `apply`
+// bits here convert back and forth.
 
 @objc(WorkplaceEntity)
 final class WorkplaceEntity: NSManagedObject {

@@ -2,9 +2,9 @@ import UIKit
 import SwiftUI
 import UniformTypeIdentifiers
 
-// the share-sheet extension. a student gets their payslip by email or screenshot;
-// sharing it to FairShift drops a copy into the App Group inbox, and the main app
-// asks for the hours and pay the next time it opens.
+// the share sheet extension. payslips usually turn up as an email PDF or a screenshot;
+// sharing it to FairShift drops a copy in the App Group inbox, and the main app asks
+// for the hours and pay next time it opens.
 final class ShareViewController: UIViewController {
     private let model = ShareModel()
 
@@ -43,7 +43,7 @@ final class ShareViewController: UIViewController {
         for provider in wanted {
             let type = provider.hasItemConformingToTypeIdentifier(UTType.pdf.identifier) ? UTType.pdf : UTType.image
             provider.loadFileRepresentation(forTypeIdentifier: type.identifier) { [weak self] url, error in
-                // the system deletes `url` after this closure returns, so copy it first
+                // iOS deletes `url` as soon as this closure ends, so copy it first
                 var copy: URL?
                 if let url {
                     let folder = FileManager.default.temporaryDirectory.appendingPathComponent(UUID().uuidString)

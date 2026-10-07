@@ -19,7 +19,7 @@ final class RosterViewModel {
         self.environment = environment
     }
 
-    // two weeks back (to record / check) and two months ahead
+    // 2 weeks back (so I can still record them) and 2 months ahead
     func refresh(now: Date = Date()) {
         let calendar = Calendar.current
         let start = calendar.date(byAdding: .day, value: -14, to: calendar.startOfDay(for: now))!

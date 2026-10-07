@@ -1,7 +1,7 @@
 import Foundation
 
-// somewhere the student is employed. awardHourlyRate is what they should be paid
-// per hour - it's the number every payslip gets checked against.
+// a place I work at. awardHourlyRate is what I should get paid per hour - every
+// payslip gets checked against it.
 struct Workplace: Identifiable, Hashable, Sendable {
     let id: UUID
     var name: String

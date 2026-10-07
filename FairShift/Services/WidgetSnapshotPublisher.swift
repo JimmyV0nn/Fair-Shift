@@ -11,9 +11,9 @@ struct SystemWidgetReloader: WidgetTimelineReloading {
     }
 }
 
-// called after every change that could alter what the widget shows (a shift added,
-// removed or recorded, a workplace added, the visa limit changed). it rebuilds the
-// snapshot in the App Group and tells WidgetKit to redraw.
+// runs after anything that could change what the widget shows (shift added / removed /
+// recorded, workplace added, visa limit changed). rebuilds the snapshot in the App
+// Group and tells WidgetKit to redraw.
 struct WidgetSnapshotPublisher {
     let checkHours: CheckFortnightHoursUseCase
     let shifts: ShiftRepository

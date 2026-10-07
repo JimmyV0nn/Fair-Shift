@@ -1,7 +1,7 @@
 import Foundation
 
 // "how many hours have I got left this fortnight?" - the number the whole app
-// (dashboard, widget, lock screen) is organised around.
+// (dashboard, widget, lock screen) is built around.
 struct CheckFortnightHoursUseCase {
     let workplaces: WorkplaceRepository
     let shifts: ShiftRepository

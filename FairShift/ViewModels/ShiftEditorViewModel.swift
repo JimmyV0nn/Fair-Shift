@@ -1,8 +1,8 @@
 import Foundation
 import Observation
 
-// one form for both "put a future shift on my roster" and "record a shift I worked".
-// the mode decides which use case runs.
+// one form, two jobs: roster a future shift, or record one I already worked.
+// the mode decides which use case gets called.
 @MainActor
 @Observable
 final class ShiftEditorViewModel {

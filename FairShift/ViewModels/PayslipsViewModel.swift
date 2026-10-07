@@ -1,8 +1,8 @@
 import Foundation
 import Observation
 
-// the Payslips tab: filed payslips, the pay check result for each, and payslip files
-// that arrived through the share sheet and still need their numbers typed in.
+// the Payslips tab: filed payslips with their pay check result, plus any payslip
+// files shared in that still need the numbers typed up.
 @MainActor
 @Observable
 final class PayslipsViewModel {

@@ -32,8 +32,8 @@ struct WorkShift: Identifiable, Hashable, Sendable {
         Int((endsAt.timeIntervalSince(startsAt) / 60).rounded())
     }
 
-    // time on the clock minus the unpaid break - this is what counts towards the
-    // visa limit and what the employer should pay for
+    // time on the clock minus the unpaid break - this is what counts for the visa
+    // limit and what the employer should pay
     var paidMinutes: Int { max(0, lengthInMinutes - unpaidBreakMinutes) }
 
     var paidHours: Decimal { Decimal(paidMinutes) / 60 }

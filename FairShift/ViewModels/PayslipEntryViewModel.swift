@@ -1,8 +1,7 @@
 import Foundation
 import Observation
 
-// files a payslip, either typed in from scratch or finishing off a file that came in
-// through the share sheet.
+// files a payslip - either typed in from scratch or finishing one that was shared in.
 @MainActor
 @Observable
 final class PayslipEntryViewModel {
@@ -53,8 +52,8 @@ final class PayslipEntryViewModel {
         }
 
         do {
-            // the use case checks everything first; only then is the shared file moved
-            // out of the inbox, so a rejected payslip never loses its attachment
+            // use case validates first, and only then does the file leave the inbox -
+            // so a rejected payslip doesn't lose its attachment
             try environment.recordPayslip.execute(workplaceID: workplaceID, periodStart: periodStart,
                                                   periodEnd: periodEnd, hoursPaid: hours, amountPaid: amount,
                                                   attachmentFileName: sharedItem?.fileName)

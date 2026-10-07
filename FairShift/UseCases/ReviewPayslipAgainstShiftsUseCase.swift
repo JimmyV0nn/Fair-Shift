@@ -1,14 +1,14 @@
 import Foundation
 
-// the point of the whole app: compares what the employer paid with what the
-// student's own shift log says they were owed. only shifts that were really worked
-// at that workplace count - rostered-but-not-worked shifts don't get paid.
+// the main point of the app: compares what the employer paid with what my own shift
+// log says I'm owed. only shifts I really worked at that workplace count -
+// rostered shifts that never happened don't get paid.
 struct ReviewPayslipAgainstShiftsUseCase {
     let workplaces: WorkplaceRepository
     let shifts: ShiftRepository
     let payslips: PayslipRepository
 
-    // a few cents of rounding on a payslip isn't an underpayment
+    // a few cents of rounding isn't underpayment
     static let tolerance: Decimal = 0.50
 
     enum Failure: LocalizedError, Equatable {

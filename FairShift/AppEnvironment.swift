@@ -1,8 +1,8 @@
 import Foundation
 import CoreData
 
-// composition root: picks the concrete repositories once and builds use cases from
-// them. views and view models only know about this object.
+// where everything gets wired together. picks the real repositories once and builds
+// the use cases from them - views and view models only talk to this.
 final class AppEnvironment {
     let workplaces: WorkplaceRepository
     let shifts: ShiftRepository
@@ -52,7 +52,7 @@ final class AppEnvironment {
         make(persistence: PersistenceController())
     }
 
-    // in-memory store, so previews never touch real data
+    // in-memory store so previews don't mess with real data
     static func preview() -> AppEnvironment {
         make(persistence: PersistenceController(inMemory: true),
              workLimit: UserDefaultsWorkLimitSettingsRepository(defaults: UserDefaults(suiteName: "fairshift.preview") ?? .standard))

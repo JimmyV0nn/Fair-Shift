@@ -1,7 +1,7 @@
 import Foundation
 
-// a payslip file that arrived through the share sheet and is waiting for the
-// student to type in the hours / amount from it
+// a payslip file shared in from another app, waiting for me to type in the hours
+// and amount
 struct SharedPayslipItem: Codable, Identifiable, Equatable {
     var id: UUID
     var fileName: String
@@ -9,8 +9,8 @@ struct SharedPayslipItem: Codable, Identifiable, Equatable {
     var note: String
 }
 
-// the share extension drops files here, the main app picks them up. both sides
-// use this one type so the folder layout can't drift apart.
+// the share extension drops files here and the main app picks them up. both use this
+// one type so they can't disagree about the folder layout.
 struct SharedPayslipInbox {
     enum InboxError: Error {
         case containerUnavailable
@@ -62,8 +62,8 @@ struct SharedPayslipInbox {
         return fileManager.fileExists(atPath: url.path) ? url : nil
     }
 
-    // moves the file out of the inbox into the permanent library once the payslip
-    // has been filed, and returns the name it is stored under
+    // once the payslip is filed, move the file from the inbox to the permanent library
+    // and give back the name it's stored under
     func adopt(_ item: SharedPayslipItem) throws -> String {
         let inbox = try inboxFolder()
         let library = try libraryFolder()
